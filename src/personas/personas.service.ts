@@ -32,7 +32,10 @@ export class PersonasService {
       return 'No encontrado';
     }
 
-    this.personas[index] = datosPersona;
+    this.personas[index] = {
+      ...datosPersona,
+      id,
+    };
 
     return `Actualizado ${id}`;
   }
